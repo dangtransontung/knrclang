@@ -25,3 +25,5 @@ while (expr2) {
 <h2>3.8 Goto labels</h2>
 - `break` `continue` only work with the most inner loop
 - `goto` can help with deep nested loop logic (e.g. break 3 loops at once)
+- code with `goto` can always be written without one :D
+
