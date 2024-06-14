@@ -49,3 +49,16 @@ In this code, no other routine will be able to access `buf` and `bufp`.
 <h2> Register Variables</h2>
 - `register` declaration advides compiler that the variable is heavily used so that it may place the variable in machine registers (compiler may ignore the advice)
 - can only be applied to automatic variables and formal parameters of function
+- it's not possible to take address of register variable (`&` operator), regardless whether the compiler putting it in register or not
+
+<h2> Block structure </h2>
+- Automatic variables, including formal parameters would hide external variables and functions of the same name (shadowing)
+
+<h2> Initialization </h2>
+- Without explicit initialization, external & static variables are guaranteed to be 0; automatic and register variables are undefined
+- External and static variables, initializer must be constant expression, done once, conceptually before execution of program
+- Automatic variables not restricted to constant initialization
+
+<h2> 4.11 C Preprocessor</h2>
+
+
